@@ -1,0 +1,127 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD92D9339629B0ED7",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../semisumator.gen/sources_1/bd/design_ha",
+      "name": "design_ha",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ha_0": "",
+      "vio_0": ""
+    },
+    "ports": {
+      "cout_0": {
+        "direction": "O"
+      },
+      "sum_0": {
+        "direction": "O"
+      },
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_ha_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "ha_0": {
+        "vlnv": "xilinx.com:module_ref:ha:1.0",
+        "xci_name": "design_ha_ha_0_0",
+        "xci_path": "ip\\design_ha_ha_0_0\\design_ha_ha_0_0.xci",
+        "inst_hier_path": "ha_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ha",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I"
+          },
+          "b": {
+            "direction": "I"
+          },
+          "sum": {
+            "direction": "O"
+          },
+          "cout": {
+            "direction": "O"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "design_ha_vio_0_0",
+        "xci_path": "ip\\design_ha_vio_0_0\\design_ha_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "2"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "2"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "vio_0/clk"
+        ]
+      },
+      "ha_0_cout": {
+        "ports": [
+          "ha_0/cout",
+          "cout_0",
+          "vio_0/probe_in1"
+        ]
+      },
+      "ha_0_sum": {
+        "ports": [
+          "ha_0/sum",
+          "sum_0",
+          "vio_0/probe_in0"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "ha_0/a"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "ha_0/b"
+        ]
+      }
+    }
+  }
+}
