@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1682406735">
+  <File Type="PA-TCL" Name="automat_cafea.tcl"/>
+  <File Type="REPORTS-TCL" Name="automat_cafea_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="automat_cafea.msk"/>
+  <File Type="RDI-RDI" Name="automat_cafea.vdi"/>
+  <File Type="BG-BIT" Name="automat_cafea.bit"/>
+  <File Type="BG-DRC" Name="automat_cafea.drc"/>
+  <File Type="BG-BGN" Name="automat_cafea.bgn"/>
+  <File Type="BG-BIN" Name="automat_cafea.bin"/>
+  <File Type="BITSTR-RBT" Name="automat_cafea.rbt"/>
+  <File Type="BITSTR-NKY" Name="automat_cafea.nky"/>
+  <File Type="BITSTR-BMM" Name="automat_cafea_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="automat_cafea.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="automat_cafea.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="automat_cafea.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-HWDEF" Name="automat_cafea.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="automat_cafea_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="automat_cafea_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="automat_cafea_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="automat_cafea_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="automat_cafea_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="automat_cafea_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="automat_cafea_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="automat_cafea_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="automat_cafea_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="automat_cafea_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="automat_cafea_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="automat_cafea_postroute_physopt_bb.dcp"/>
+  <File Type="PDI-FILE" Name="automat_cafea.pdi"/>
+  <File Type="RCFI_FILE" Name="automat_cafea.rcfi"/>
+  <File Type="CFI_FILE" Name="automat_cafea.cfi"/>
+  <File Type="RNPI_FILE" Name="automat_cafea.rnpi"/>
+  <File Type="NPI_FILE" Name="automat_cafea.npi"/>
+  <File Type="RBD_FILE" Name="automat_cafea.rbd"/>
+  <File Type="ROUTE-RQS" Name="automat_cafea_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="automat_cafea_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/automat_cafea.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="automat_cafea"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
